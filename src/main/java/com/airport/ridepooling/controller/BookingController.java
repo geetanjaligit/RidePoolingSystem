@@ -32,6 +32,13 @@ public class BookingController {
         return bookingService.getPendingBookings();
     }
 
+    // Fetches a specific booking to check its current status and assigned cab.
+    @GetMapping("/{id}")
+    @Operation(summary = "Get Booking Status", description = "Retrieves the status, final price, and assigned cab details for a specific booking ID")
+    public BookingResponse getBookingById(@PathVariable Long id) {
+        return bookingService.getBookingById(id);
+    }
+
     // Allows a user to cancel their booking.
     @DeleteMapping("/{id}/cancel")
     @Operation(summary = "Cancel a Ride", description = "Cancels a booking and automatically restores seats/luggage to the assigned cab if applicable")

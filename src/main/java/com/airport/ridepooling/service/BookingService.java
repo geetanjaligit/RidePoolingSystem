@@ -41,18 +41,26 @@ public class BookingService {
                 .collect(Collectors.toList());
     }
 
+    // Fetches a specific booking by ID to check its status, price, and assigned
+    // cab.
+    public BookingResponse getBookingById(Long id) {
+        BookingRequest request = bookingRequestRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Booking not found"));
+        return entityMapper.toBookingResponse(request);
+    }
+
     @Transactional
     public BookingResponse cancelBooking(Long bookingId) {
-        //Find the booking
+        // Find the booking
         BookingRequest request = bookingRequestRepository.findById(bookingId)
                 .orElseThrow(() -> new RuntimeException("Booking not found"));
 
-        //Prevent double-cancellation
+        // Prevent double-cancellation
         if (request.getStatus() == BookingRequest.BookingStatus.CANCELLED) {
             throw new RuntimeException("Booking is already cancelled");
         }
 
-        //Capacity Restoration Logic
+        // Capacity Restoration Logic
         // If the passenger was already assigned to a cab, we must give the space back
         if (request.getStatus() == BookingRequest.BookingStatus.POOLED && request.getAssignedCab() != null) {
             Cab cab = request.getAssignedCab();
@@ -67,7 +75,7 @@ public class BookingService {
             }
         }
 
-        //Update status and remove the cab link
+        // Update status and remove the cab link
         request.setStatus(BookingRequest.BookingStatus.CANCELLED);
         request.setAssignedCab(null);
 
