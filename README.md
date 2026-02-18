@@ -68,16 +68,16 @@ The API is fully documented via **Swagger**. Once the application is running, yo
 👉 [http://localhost:8081/swagger-ui/index.html](http://localhost:8081/swagger-ui/index.html)
 
 ### Swagger Screenshots
-![Register a Cab](/home/aajmaiupar/Documents/RidePoolingSystem/images/Register%20a%20cab.png)
+![Register a Cab](/home/aajmaiupar/Documents/RidePoolingSystem/images/Register a cab.png)
 *Registering a new vehicle to the airport fleet.*
 
-![Register Pooling](/home/aajmaiupar/Documents/RidePoolingSystem/images/Register%20Pooling.png)
+![Register Pooling](/home/aajmaiupar/Documents/RidePoolingSystem/images/Register Pooling.png)
 *Triggering the Matching Engine to group passengers.*
 
-![Passenger Booking](/home/aajmaiupar/Documents/RidePoolingSystem/images/Passenger%20Book%20a%20cab.png)
+![Passenger Booking](/home/aajmaiupar/Documents/RidePoolingSystem/images/Passenger Book a cab.png)
 *A passenger submitting a new ride request.*
 
-![Check Status](/home/aajmaiupar/Documents/RidePoolingSystem/images/Get%20booking_status.png)
+![Check Status](/home/aajmaiupar/Documents/RidePoolingSystem/images/Get booking_status.png)
 *Checking the assigned cab plate and final price for a booking.*
 
 ## 7. Setup & Run Instructions
