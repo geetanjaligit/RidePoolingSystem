@@ -1,5 +1,11 @@
 # Smart Airport Ride Pooling Backend System 🚗✈️
 
+![Java](https://img.shields.io/badge/Java-17-orange)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.2-brightgreen)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue)
+![Swagger](https://img.shields.io/badge/Swagger-OpenAPI%203.0-brightgreen)
+![Docker](https://img.shields.io/badge/Docker-Local%20Support-blue)
+
 A robust, high-performance Spring Boot backend designed to manage and group airport cab requests efficiently. This system optimizes vehicle utility through a greedy matching algorithm, handles high concurrency with optimistic locking, and provides a transparent dynamic pricing model in INR.
 
 ## 1. Overview
@@ -68,23 +74,11 @@ The API is fully documented via **Swagger**. Once the application is running, yo
 👉 [http://localhost:8081/swagger-ui/index.html](http://localhost:8081/swagger-ui/index.html)
 
 ### Swagger Screenshots
-![Register a Cab](images/Register%20a%20cab.png)
-*Registering a new vehicle to the airport fleet.*
-
-![Register Pooling](images/Register%20Pooling.png)
-*Triggering the Matching Engine to group passengers.*
-
-![Passenger Booking](images/Passenger%20Book%20a%20cab.png)
-*A passenger submitting a new ride request.*
-
-![Check Status](images/Get%20booking%20status.png)
-*Checking the assigned cab plate and final price for a booking.*
-
-![Cancel Booking](images/Cancel%20Booking.png)
-*Cancelling a ride and restoring cab capacity.*
-
-![Pending Bookings](images/Check%20Pending%20Booking.png)
-*Viewing the list of all passengers waiting for a match.*
+| Feature: Cab & Booking | Feature: Operations & Status |
+| :--- | :--- |
+| **Register a Cab**<br><img src="images/Register%20a%20cab.png" width="400"> | **Register Pooling**<br><img src="images/Register%20Pooling.png" width="400"> |
+| **Passenger Booking**<br><img src="images/Passenger%20Book%20a%20cab.png" width="400"> | **Check Status**<br><img src="images/Get%20booking%20status.png" width="400"> |
+| **Cancel Booking**<br><img src="images/Cancel%20Booking.png" width="400"> | **Pending Bookings**<br><img src="images/Check%20Pending%20Booking.png" width="400"> |
 
 ## 7. Setup & Run Instructions
 1.  **Clone the Repository**:
