@@ -68,17 +68,23 @@ The API is fully documented via **Swagger**. Once the application is running, yo
 👉 [http://localhost:8081/swagger-ui/index.html](http://localhost:8081/swagger-ui/index.html)
 
 ### Swagger Screenshots
-![Register a Cab](/home/aajmaiupar/Documents/RidePoolingSystem/images/Register a cab.png)
+![Register a Cab](images/Register%20a%20cab.png)
 *Registering a new vehicle to the airport fleet.*
 
-![Register Pooling](/home/aajmaiupar/Documents/RidePoolingSystem/images/Register Pooling.png)
+![Register Pooling](images/Register%20Pooling.png)
 *Triggering the Matching Engine to group passengers.*
 
-![Passenger Booking](/home/aajmaiupar/Documents/RidePoolingSystem/images/Passenger Book a cab.png)
+![Passenger Booking](images/Passenger%20Book%20a%20cab.png)
 *A passenger submitting a new ride request.*
 
-![Check Status](/home/aajmaiupar/Documents/RidePoolingSystem/images/Get booking_status.png)
+![Check Status](images/Get%20booking%20status.png)
 *Checking the assigned cab plate and final price for a booking.*
+
+![Cancel Booking](images/Cancel%20Booking.png)
+*Cancelling a ride and restoring cab capacity.*
+
+![Pending Bookings](images/Check%20Pending%20Booking.png)
+*Viewing the list of all passengers waiting for a match.*
 
 ## 7. Setup & Run Instructions
 1.  **Clone the Repository**:
@@ -163,7 +169,4 @@ You can directly copy these JSON payloads into Postman or Swagger UI to test the
 *   **Connection Pooling**: Uses **HikariCP** for efficient database connection management.
 *   **Transactional Integrity**: All critical operations are `@Transactional` to prevent data corruption during failures.
 
----
-
-*Built to showcase scalable system design, robust concurrency control, and efficient real-world ride pooling optimization.*
 
